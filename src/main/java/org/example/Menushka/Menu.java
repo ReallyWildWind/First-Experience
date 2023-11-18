@@ -13,7 +13,7 @@ public class Menu {
     private String BIN(int arg1) {
         return Integer.toBinaryString(arg1);
     }
-    public String Result(int arg1) { //тупо выводит результат
+    public String Result(int arg1) {
         System.out.printf("HEX:" + HEX(arg1) + "  " + "DEC:" + arg1 + "  " + "OCT:" + OCT(arg1) + "  " + "BIN:" + BIN(arg1) + "\n");
         System.out.println();
         return null;
@@ -29,7 +29,7 @@ public class Menu {
         System.out.println("Выберите операцию: '+', '-', '*', '/', '+/-', 'C', 'СТОП'");
         return in.next();
     }
-    public Integer ConvertorArgs(String sistema, String arg1) { //ну по идее должно конверитироваться в какую-либо систему. работает или нет - хз
+    public Integer ConvertorArgs(String sistema, String arg1) {
         switch (sistema) {
             case "HEX" -> {
                 return Integer.parseInt(arg1, 16);
@@ -46,7 +46,7 @@ public class Menu {
         }
         return 0;
     }
-    public String ConvertorLast(String sistema, int arg1) { //превращает результат вычисления в ту систему которая задана, по идее
+    public String ConvertorLast(String sistema, int arg1) {
         switch (sistema) {
             case "HEX" -> {
                 return Integer.toHexString(arg1);
