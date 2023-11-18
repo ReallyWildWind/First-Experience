@@ -9,11 +9,11 @@ public class Osnova {
         Operations oper = new Operations();
         Menu menu = new Menu();
 
-        String sist = menu.OpredelenieSistSchiclenia(); //ненужная штука по факту, просто чтобы сократить код сделал
+        String sist = menu.OpredelenieSistSchiclenia();
 
         System.out.println("Введите число: ");
-        String a = in.next(); //здесь хранится то, что пользователь ввел
-        int FirstArg = (int) menu.ConvertorArgs(sist, a), result = 0;; //эта штука для компа, чтобы считать, тк он не умеют никак кроме десятичной. уже в цифрах нормальных
+        String a = in.next();
+        int FirstArg = (int) menu.ConvertorArgs(sist, a), result = 0;
 
         label:
         while (true) { //начало цикла
@@ -58,12 +58,12 @@ public class Osnova {
                         }
                         default -> {
                             result = oper.Mult(FirstArg, SecondArg);
-                            System.out.println(menu.ConvertorLast(sist, result)); //повторил
+                            System.out.println(menu.ConvertorLast(sist, result));
                         }
                     }
                     break;
                 default:
-                    System.out.println("ОШИБКА! Проверьте корректность вводимых данных и начните сначала");
+                    System.out.println("ОШИБКА! Проверьте корректность вводимых данных");
                     break;
             }
             FirstArg = result;
